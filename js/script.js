@@ -31,22 +31,13 @@ if(playerInput == '1'){
 printMessage('Twój ruch to: ' + playerMove);
 
 
-if( computerMove == 'kamień' && playerMove == 'papier'){
+if( computerMove == 'kamień' && playerMove == 'papier', computerMove == 'nożyce' && playerMove == 'kamień',
+  computerMove == 'papier' && playerMove == 'nożyce'){
   printMessage('Ty wygrywasz!');
-} else {
-  printMessage('Spróbuj jeszcze raz!');
-}
-if( computerMove == 'nożyce' && playerMove == 'kamień'){
-  printMessage('Ty wygrywasz!');
-} else {
-  printMessage('Spróbuj jeszzce raz!');
-}
-if( computerMove == 'papier' && playerMove == 'nożyce'){
-  printMessage('Ty wygrywasz!');
-} else {
-  printMessage('Spróbuj jeszzce raz!');
-}
-if( computerMove == playerMove){
+} else if (computerMove == playerMove){
   printMessage('Wybraliście takie same ruchy. Spróbuj ponownie!');
-if( playerMove == 'nieznany ruch'){
+} else if (playerMove == 'nieznany ruch'){
   printMessage('Czy na pewno wybrałaś/eś 1, 2 lub 3?');
+} else {
+  printMessage('Spróbuj jeszzce raz!');
+}

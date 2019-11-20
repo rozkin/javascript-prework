@@ -63,6 +63,10 @@ if( computerMove == 'nożyce' && playerMove == 'kamień'){
 }
 if( computerMove == 'papier' && playerMove == 'nożyce'){
   printMessage('Ty wygrywasz!');
+} else if (computerMove == playerMove){
+  printMessage('Wybraliście takie same ruchy. Spróbuj ponownie!');
+} else if (playerMove == 'nieznany ruch'){
+  printMessage('Czy na pewno wybrałaś/eś 1, 2 lub 3?');
 } else {
   printMessage('Spróbuj jeszzce raz!');
 }

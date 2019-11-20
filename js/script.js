@@ -31,9 +31,9 @@ let computerMove = getMoveName(randomNumber);
   computerMove = 'papier';
 } else if (randomNumber == 3) {
   computerMove = 'nożyce';
-}
+}*/
 
-printMessage('Mój ruch to: ' + computerMove); */
+printMessage('Mój ruch to: ' + computerMove);
 
 let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 
@@ -46,12 +46,12 @@ let playerMove = getMoveName(randomNumber);
 } else if (playerInput == '2') {
   playerMove = 'papier';
 } else if (playerInput == '3') {
-  playerMove = 'nożyce';
+  playerMove = 'nożyce'; */
 
-printMessage('Twój ruch to: ' + playerMove); */
+printMessage('Twój ruch to: ' + playerMove);
 
 
-if( computerMove == 'kamień' && playerMove == 'papier'){
+/*if( computerMove == 'kamień' && playerMove == 'papier'){
   printMessage('Ty wygrywasz!');
 } else {
   printMessage('Spróbuj jeszcze raz!');
@@ -73,4 +73,15 @@ if( playerMove == 'nieznany ruch'){
 
 function displayResult (argComputerMove, argPlayerMove) {
   printMessage('Zagrałem ' + argComputerMove + ', a ty ' + argPlayerMove);
+} */
+
+if(( computerMove == 'kamień' && playerMove == 'papier')||(computerMove == 'nożyce' && playerMove == 'kamień')||
+(computerMove == 'papier' && playerMove == 'nożyce')){
+  printMessage('Ty wygrywasz!');
+} else if (computerMove == playerMove){
+  printMessage('Wybraliście takie same ruchy. Spróbuj ponownie!');
+} else if (playerMove == 'nieznany ruch'){
+  printMessage('Czy na pewno wybrałaś/eś 1, 2 lub 3?');
+} else {
+  printMessage('Spróbuj jeszcze raz!');
 }

@@ -79,13 +79,20 @@ function displayResult (argComputerMove, argPlayerMove) {
   printMessage('Zagrałem ' + argComputerMove + ', a ty ' + argPlayerMove);
 } */
 
-if(( computerMove == 'kamień' && playerMove == 'papier')||(computerMove == 'nożyce' && playerMove == 'kamień')||
-(computerMove == 'papier' && playerMove == 'nożyce')){
+function displayResult(argComputerMove, argPlayerMove){
+  console.log('moves:', argComputerMove, argPlayerMove);
+  printMessage('Zagrałem' + argComputerMove + ', a Ty ' + argPlayerMove);
+if(( argComputerMove == 'kamień' && argPlayerMove == 'papier')||(argComputerMove == 'nożyce' && argPlayerMove == 'kamień')||
+(argComputerMove == 'papier' && argPlayerMove == 'nożyce')){
   printMessage('Ty wygrywasz!');
-} else if (computerMove == playerMove){
+} else if (argComputerMove == argPlayerMove){
   printMessage('Wybraliście takie same ruchy. Spróbuj ponownie!');
-} else if (playerMove == 'nieznany ruch'){
+  console.log('Comp i player wybrali ten sam ruch');
+} else if (argPlayerMove == 'nieznany ruch'){
   printMessage('Czy na pewno wybrałaś/eś 1, 2 lub 3?');
+  console.log('Gracz wybrał nieznany ruch: '+ argPlayerMove);
 } else {
-  printMessage('Spróbuj jeszcze raz!');
+  printMessage('Niestety, tym razem przegrałeś/aś. Spróbuj jeszcze raz!');
+  console.log('Gracz przgerał')
+}
 }

@@ -33,11 +33,11 @@
   function playGame(playerInput) {
     clearMessages();
 
-    let randomNumber = Math.floor(Math.random() * 3 + 1);
+    const randomNumber = Math.floor(Math.random() * 3 + 1);
 
     console.log('Wylosowana liczba to: ' + randomNumber);
 
-    let computerMove = getMoveName(randomNumber);
+    const computerMove = getMoveName(randomNumber);
 
     printMessage('Komputer ruch to: ' + computerMove);
 
@@ -57,7 +57,7 @@
     playGame(1);
   }
 
-  let playRock = document.getElementById('play-rock');
+  const playRock = document.getElementById('play-rock');
 
   playRock.addEventListener('click', buttonClicked);
 
@@ -66,7 +66,7 @@
     playGame(2);
   }
 
-  let playPaper = document.getElementById('play-paper');
+  const playPaper = document.getElementById('play-paper');
   playPaper.addEventListener('click', buttonPaper);
 
   function buttonScissors() {
@@ -74,7 +74,7 @@
     playGame(3);
   }
 
-  let playScissors = document.getElementById('play-scissors');
+  const playScissors = document.getElementById('play-scissors');
   playScissors.addEventListener('click', buttonScissors);
   //playGame(3);
 }
